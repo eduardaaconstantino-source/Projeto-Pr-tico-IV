@@ -1,0 +1,62 @@
+<section id="empresa" class="secao">
+            <h2>Sobre a Flor do Cerrado</h2>
+            <p class="intro-empresa">Acreditamos que a beleza verdadeira vem da natureza. A Flor do Cerrado nasceu em 2020 com a missão de criar cosméticos **naturais e artesanais**, utilizando o poder dos extratos botânicos do nosso bioma.</p>
+            
+            <div class="valores">
+                <h3>Nossa Filosofia:</h3>
+                <ul>
+                    <li>**Sustentabilidade:** Priorizamos embalagens ecológicas e ingredientes de fontes renováveis.</li>
+                    <li>**Produção Artesanal:** Pequenos lotes, garantindo a qualidade e o frescor de cada produto.</li>
+                    <li>**Livre de Tóxicos:** Nossas fórmulas são livres de sulfatos, parabenos e petrolatos.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="faq" class="secao">
+            <h2>Dúvidas Comuns</h2>
+            
+            <div class="faq-acordeao">
+                
+                <div class="faq-item">
+                    <h4 class="pergunta">Os produtos Flor do Cerrado são veganos?</h4>
+                    <p class="resposta">Sim! Toda a nossa linha de cosméticos é 100% vegana, livre de crueldade animal e certificada.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4 class="pergunta">Qual o prazo de validade de um cosmético artesanal?</h4>
+                    <p class="resposta">Como usamos conservantes naturais, o prazo médio é de 6 a 12 meses após a fabricação. Sempre verifique a data na embalagem do produto.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4 class="pergunta">Vocês entregam para outros estados?</h4>
+                    <p class="resposta">Fazemos entregas em todo o Brasil. Você pode calcular o frete e o prazo de entrega diretamente na página do produto, inserindo seu CEP.</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="contato" class="secao">
+            <h2>Fale Conosco</h2>
+            <p>Use o formulário abaixo ou envie um e-mail. Teremos prazer em ajudar!</p>
+            
+            <form class="form-contato">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="assunto">Assunto:</label>
+                <input type="text" id="assunto" name="assunto" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <button type="submit" class="btn-cta">Enviar Mensagem</button>
+            </form>
+            
+            <div class="info-contato">
+                <p>E-mail: contato@flordocerrado.com.br</p>
+                <p>Telefone: (31) 99999-0000</p>
+            </div>
+        </section>
