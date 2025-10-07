@@ -1,0 +1,114 @@
+/* --- ESTILOS GERAIS DE CONTEÚDO --- */
+
+.intro-empresa {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* VALORES DA EMPRESA */
+.valores {
+    background-color: #f0fff0; /* Fundo suave */
+    padding: 20px;
+    border-left: 5px solid #38761D; /* Borda verde */
+    border-radius: 4px;
+}
+.valores ul {
+    list-style: none;
+    padding-left: 0;
+}
+.valores li {
+    margin-bottom: 10px;
+}
+
+/* --- ESTILOS DO FAQ (Acordeão Básico) --- */
+
+.faq-acordeao {
+    margin-top: 20px;
+}
+
+.faq-item {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.pergunta {
+    background-color: white;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0;
+    color: #38761D; /* Título da pergunta em verde */
+}
+
+/* Simulação de Acordeão: A resposta deve ser escondida por padrão. 
+   O JavaScript faria a resposta aparecer/desaparecer ao clicar na pergunta. */
+.resposta {
+    padding: 15px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    /* Para demonstração, deixamos visível. No projeto real, você usaria 'display: none;' e JS */
+    /* display: none; */ 
+}
+
+/* --- ESTILOS DO FORMULÁRIO DE CONTATO --- */
+
+.form-contato label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #38761D;
+}
+
+.form-contato input[type="text"],
+.form-contato input[type="email"],
+.form-contato textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-contato textarea {
+    resize: vertical;
+}
+
+.form-contato .btn-cta {
+    width: 100%;
+    margin-top: 25px;
+    /* O estilo do botão já está definido acima, apenas adaptamos a largura */
+}
+
+.info-contato {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed #ddd;
+}
+
+
+/* --- AJUSTE DE RESPONSIVIDADE (Desktop - min-width: 768px) --- */
+
+@media (min-width: 768px) {
+    
+    /* Na versão desktop, queremos a descrição da empresa ao lado dos valores */
+    #empresa {
+        display: flex;
+        gap: 40px;
+    }
+    .intro-empresa {
+        flex: 1; /* Ocupa metade do espaço */
+        margin-bottom: 0;
+    }
+    .valores {
+        flex: 1; /* Ocupa a outra metade */
+    }
+    
+    /* O formulário de contato pode ter um tamanho máximo no desktop */
+    .form-contato {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
