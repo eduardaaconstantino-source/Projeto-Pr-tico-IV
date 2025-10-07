@@ -1,0 +1,105 @@
+<footer class="rodape">
+        <p>&copy; 2024 Flor do Cerrado. Beleza natural e sustentável.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // ===========================================
+    // FUNCIONALIDADE 1: MENU MOBILE (HAMBÚRGUER)
+    // ===========================================
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    // Adiciona um listener ao checkbox (o ícone Hambúrguer)
+    menuToggle.addEventListener('change', function() {
+        // Se o checkbox estiver marcado, mostra o menu. Senão, esconde.
+        if (this.checked) {
+            navLinks.style.display = 'block';
+        } else {
+            navLinks.style.display = 'none';
+        }
+    });
+
+    // Opcional: Fecha o menu ao clicar em um link (útil no mobile)
+    const links = document.querySelectorAll('.nav-links a');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            if (menuToggle.checked) {
+                menuToggle.checked = false;
+                navLinks.style.display = 'none';
+            }
+        });
+    });
+
+
+    // ===========================================
+    // FUNCIONALIDADE 2: ACORDEÃO DO FAQ
+    // ===========================================
+    const perguntas = document.querySelectorAll('.faq-item .pergunta');
+    
+    // Passamos por todas as perguntas e adicionamos um evento de clique
+    perguntas.forEach(pergunta => {
+        pergunta.addEventListener('click', () => {
+            // Encontra a div pai (faq-item) e depois a resposta
+            const faqItem = pergunta.parentElement;
+            const resposta = faqItem.querySelector('.resposta');
+
+            // Verifica se a resposta está visível (se for 'block')
+            const isVisible = resposta.style.display === 'block';
+
+            // Primeiro, fecha todas as respostas abertas (opcional, mas limpa o layout)
+            document.querySelectorAll('.faq-item .resposta').forEach(r => {
+                r.style.display = 'none';
+            });
+            
+            // Se a resposta atual não estava visível, a mostra.
+            if (!isVisible) {
+                resposta.style.display = 'block';
+            }
+        });
+    });
+
+
+    // ===========================================
+    // FUNCIONALIDADE 3: VALIDAÇÃO BÁSICA DE FORMULÁRIO
+    // ===========================================
+    const form = document.querySelector('.form-contato');
+    
+    if (form) { // Garante que o formulário existe na página
+        form.addEventListener('submit', function(e) {
+            
+            // Impede o envio padrão do formulário (para que a validação funcione)
+            e.preventDefault(); 
+            
+            // Coleta os valores dos campos
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            // Verificação simples
+            if (nome === '' || email === '' || mensagem === '') {
+                alert('Por favor, preencha todos os campos obrigatórios para enviar a mensagem.');
+                return false; // Impede o envio
+            }
+            
+            // Verificação básica de email (apenas verifica se tem '@')
+            if (email.indexOf('@') === -1) {
+                alert('Por favor, insira um endereço de e-mail válido.');
+                return false; // Impede o envio
+            }
+            
+            // Se todas as validações passarem
+            alert('Mensagem enviada com sucesso! A Flor do Cerrado retornará em breve.');
+            
+            // Opcional: Limpar o formulário após o sucesso
+            form.reset(); 
+            
+            // NOTA: Em um projeto real, o JavaScript enviaria os dados
+            // para um servidor (backend) aqui, usando fetch() ou XMLHttpRequest.
+        });
+    }
+
+});
