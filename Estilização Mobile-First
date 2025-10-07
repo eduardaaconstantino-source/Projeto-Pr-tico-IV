@@ -1,0 +1,159 @@
+/* PALETA DE CORES: 
+   Verde Escuro: #38761D
+   Terracota: #C27A7D
+   Creme: #F5F5DC 
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F5DC; /* Creme/Off-White */
+    color: #333;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #38761D; /* Verde Escuro */
+    margin-bottom: 10px;
+}
+
+/* ------------------------------------- */
+/* ESTILOS MOBILE (PADRÃO - TELA PEQUENA)*/
+/* ------------------------------------- */
+
+.container {
+    padding: 20px;
+}
+
+/* CABEÇALHO (Header) */
+.cabecalho {
+    background-color: #38761D; /* Verde Escuro */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+/* MENU HAMBÚRGUER (Visual) */
+.menu-icon {
+    display: block; 
+    font-size: 1.5em;
+    cursor: pointer;
+}
+#menu-toggle {
+    display: none; /* Esconde o checkbox */
+}
+.nav-links {
+    list-style: none;
+    position: absolute;
+    top: 55px; 
+    right: 0;
+    background-color: #38761D;
+    width: 180px;
+    z-index: 100;
+    display: none; /* Escondido por padrão no mobile. O JavaScript o tornaria `display: block;` */
+}
+.nav-links li a {
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* SEÇÃO HERO (Destaque Principal) */
+.hero {
+    background-color: #f0fff0; /* Um verde bem suave */
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* BOTÃO CTA */
+.btn-cta {
+    display: inline-block;
+    background-color: #C27A7D; /* Terracota */
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+.btn-cta:hover {
+    background-color: #A06366;
+}
+
+/* GRID DE PRODUTOS (MOBILE - UMA COLUNA) */
+.grid-produtos {
+    display: grid;
+    grid-template-columns: 1fr; /* Uma coluna no mobile */
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.produto-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+/* RODAPÉ */
+.rodape {
+    background-color: #38761D;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+
+/* ------------------------------------- */
+/* MEDIA QUERIES (ADAPTAÇÃO PARA DESKTOP)*/
+/* ------------------------------------- */
+@media (min-width: 768px) {
+    
+    .container {
+        max-width: 1200px; 
+        margin: 0 auto;
+    }
+
+    /* OCULTA O ÍCONE HAMBÚRGUER */
+    .menu-icon {
+        display: none; 
+    }
+    
+    /* MOSTRA O MENU NO DESKTOP (HORIZONTAL) */
+    .nav-links {
+        position: static;
+        display: flex; 
+        width: auto;
+        background-color: transparent;
+    }
+
+    .nav-links li a {
+        color: white;
+        padding: 0 15px;
+        border-bottom: none;
+    }
+
+    /* GRID DE PRODUTOS (DESKTOP - TRÊS COLUNAS) */
+    .grid-produtos {
+        grid-template-columns: repeat(4, 1fr); /* Quatro colunas no desktop, conforme a exigência de 4 produtos */
+    }
+}
