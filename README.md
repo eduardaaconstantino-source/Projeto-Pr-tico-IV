@@ -1,2 +1,69 @@
 # Projeto-Pr-tico-IV
 App ou Site
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Flor do Cerrado | Cosméticos Naturais</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="cabecalho">
+        <div class="logo">Flor do Cerrado</div>
+        
+        <nav class="menu-nav">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#empresa">Sobre Nós</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        
+        <section id="home" class="secao hero">
+            <h1>A beleza que vem da natureza.</h1>
+            <p>Descubra nossos cosméticos naturais e artesanais, feitos com o poder dos ingredientes do Cerrado.</p>
+            <a href="#produtos" class="btn-cta">Ver Produtos</a>
+        </section>
+
+        <section id="produtos" class="secao">
+            <h2>Nossos Produtos Naturais</h2>
+            
+            <h3>Linha 1: Cuidados Faciais</h3>
+            <div class="grid-produtos">
+                <div class="produto-card">Sérum Hidratante</div>
+                <div class="produto-card">Tônico Floral</div>
+                <div class="produto-card">Máscara Argila Rosa</div>
+                <div class="produto-card">Esfoliante Suave</div>
+            </div>
+
+            <h3>Linha 2: Cuidados Corporais</h3>
+            <div class="grid-produtos">
+                <div class="produto-card">Manteiga Corporal</div>
+                <div class="produto-card">Sabonete Artesanal</div>
+                <div class="produto-card">Loção Pós-Banho</div>
+                <div class="produto-card">Creme Mãos & Pés</div>
+            </div>
+
+            </section>
+
+        </main>
+
+    <footer class="rodape">
+        <p>&copy; 2024 Flor do Cerrado. Beleza natural e sustentável.</p>
+    </footer>
+    
+</body>
+</html>
