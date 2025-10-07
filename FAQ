@@ -1,0 +1,10 @@
+/* No seu style.css: */
+
+.resposta {
+    padding: 15px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    
+    /* MUDANÇA ESSENCIAL: Esconder a resposta por padrão */
+    display: none; 
+}
